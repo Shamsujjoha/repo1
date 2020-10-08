@@ -92,7 +92,7 @@ if(touches.length>1){
 
 
 function countTouches2(event) {
-        if (oflag) {
+        if (oflag==0) {
 		
 		event.preventDefault();
 		candidate.focus(); 
