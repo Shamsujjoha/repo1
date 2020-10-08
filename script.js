@@ -1,5 +1,5 @@
 var candidate;
-
+var oflag=0;
 
 
 function countTouches1(event) {
@@ -11,6 +11,9 @@ if(touches.length>1){
 	return true;
 }*/
 
+
+
+	oflag=0;
 
   //var x = event.touches[0].screenX;
   //var y = event.touches[0].screenY;
@@ -89,11 +92,19 @@ if(touches.length>1){
 
 
 function countTouches2(event) {
-        if (event.touches.length ==1) {
+        if (oflag) {
+		
 		event.preventDefault();
 		candidate.focus(); 
 
 	}
+
+}
+
+
+
+function countTouches3(event) {
+ oflag=1;
 
 }
 function getPosition(el) {
